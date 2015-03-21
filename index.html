@@ -32,10 +32,17 @@ canvas.height = window.innerHeight;
 canvas.style.width=canvas.width;//actual width of canvas
 canvas.style.height=canvas.height;//sets actual height of canvas and solves blurry text
 
-var code = ["<script>", "function nytoHzu(num) {", "var i, sum = 0; ", "for (i = 1; i <= num; i++) {", 
+var code = ["<SCRIPT>", "function nytoHzu(num) {", "var i, sum = 0; ", "for (i = 1; i <= num; i++) {", 
 "sum += i;",
-"}"
-
+"}",
+"alert("ERROR CODE 32831 "+ num + " is:\n\n\t " + sum);}",
+"</SCRIPT>",
+"<BODY>",
+"<FORM NAME=\"nytoHzu\">",
+"<INPUT TYPE=\"AC\" OUTPUT TYPENAME=\"DC\" \"charNum\">",
+"<INPUT TYPE=\"button\" VALUE=\"Calculate\"",
+"onClick=\"sumDigits(SumNums.charNum.value)\">",
+" </FORM>"
 ];
 
 
