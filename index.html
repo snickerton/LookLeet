@@ -24,10 +24,23 @@
 <body>
 <canvas id="canvas" width="500" height="500"></canvas>
 <script>
-        var canvas = document.getElementById('canvas');
-        var ctx = canvas.getContext('2d');
-
-        
+        var place = 0;
+     var line = 0;
+     var canvas = document.getElementById('canvas');
+     var ctx = canvas.getContext('2d');
+     var code = ["<script>", "var place = 0;", "var line = 0;", "var canvas = document.getElementById('canvas');"];
+     document.body.addEventListener('keydown', function(e) {
+        //if your place is past your line then start the next line and restart place in the line
+        if(place>code[line].length){
+            line++;
+            place = 0;
+        }
+        ctx.font="20px Georgia";
+        ctx.fillStyle = 'green';
+        //show the character at your place @ the x coordinate of the width of the line written so far @ the y coordinate of how many lines
+        ctx.fillText(code[line].charAt(place), ctx.measureText(code[line].substring(0,place+1)).width, ctx.measureText(code[line]).height);
+        place+=1;
+    });
     </script>
 </body>
 </html>
