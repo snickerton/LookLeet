@@ -27,6 +27,8 @@ var place = 0;
 var line = 0;
 var canvas = document.getElementById('canvas');
 var ctx = canvas.getContext('2d');
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
 canvas.style.width=canvas.width;//actual width of canvas
 canvas.style.height=canvas.height;//sets actual height of canvas and solves blurry text
 
